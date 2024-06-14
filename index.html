@@ -8,9 +8,10 @@
 </head>
 <body>
     <header>
-
+        <h1>SHOPPE</h1>
+        <button id="checkout">checkout</button>
     </header>
-    <main>
+    <main class="content">
         <div class="item star-wars">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7LHXBA4BYrZtqKfLcB0LfZ1AxZANMYBfGCBRpNIynO3XuvBUOvH7ExUPEkZJEXN9aAhw&usqp=CAU" alt="star wars legion core set">
             <button>add to cart</button>
@@ -55,8 +56,22 @@
         <div id="checkout"></div>
     </main>
     <footer>
-
+        <div class="subtotal is-red">order total $____.__</div>
     </footer>
+    <div id="checkout-page" class="hidden">
+        <div id="final-total"></div>
+        <div id="your cart">
+            <h2>your cart</h2>
+        </div>
+        <form action="submit">
+        <p>how would you like to pay</p>
+            <label for="card">card</label>
+            <input type="radio" id="card" name="pay-info" value="credit/debit">
+            <label for="cash">cash</label>
+            <input type="radio" id="cash" name="pay-info" value="change">
+            <button id="place-order">place order</button>
+        </form>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
