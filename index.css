@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    background-image: url("moneybag.png");
 }
 
 header {
@@ -71,4 +72,8 @@ footer {
 
 .hidden {
     display: none;
+}
+
+.brand {
+    position: relative;
 }
