@@ -74,16 +74,42 @@ footer {
     display: none;
 }
 
+tys-mobile
+.brand {
+    position: relative;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.your-cart {
+    display: flex;
+    justify-content: center;
+}
+
+
+main
 @media screen and (min-width: 420px) {
     .content {
         display: flex;
         flex-wrap: wrap;
     }
 
+  tys-mobile
+    .form-container {
+        border: 1px solid black;
+    }
+
+    .your-cart {
+        float: left;
+      
     form {
         border: 1px solid black;
     }
     .brand {
         position: relative;
+        main
     }
 }

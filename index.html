@@ -56,19 +56,25 @@
     <footer>
         <div class="subtotal is-red">order total $____.__</div>
     </footer>
+
+    <div id="checkout-page" class="hidde">
+
     <div class="hidden checkout-page">
+
         <div id="final-total"></div>
         <div id="your cart">
-            <h2>your cart</h2>
+            <h2 class="your-cart">your cart</h2>
         </div>
-        <form action="submit">
-        <p>how would you like to pay</p>
-            <label for="card">card</label>
-            <input type="radio" id="card" name="pay-info" value="credit/debit">
-            <label for="cash">cash</label>
-            <input type="radio" id="cash" name="pay-info" value="change">
-            <button id="place-order">place order</button>
-        </form>
+        <div class="form-container">
+            <form action="submit">
+            <p>how would you like to pay</p>
+                <label for="card">card</label>
+                <input type="radio" id="card" name="pay-info" value="credit/debit">
+                <label for="cash">cash</label>
+                <input type="radio" id="cash" name="pay-info" value="change">
+                <button id="place-order">place order</button>
+            </form>
+        </div>
     </div>
     <script src="index.js"></script>
 </body>
