@@ -75,8 +75,19 @@ footer {
     display: none;
 }
 
+tys-mobile
 .brand {
     position: relative;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.your-cart {
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (min-width: 420px) {
@@ -92,7 +103,7 @@ footer {
     .form-container {
         border: 1px solid black;
     }
-
+  
     .cart {
         float: left;
     }
@@ -100,5 +111,14 @@ footer {
     form {
         border: 1px solid black;
         float: right;
+
+    .your-cart {
+        float: left;
+      
+    form {
+        border: 1px solid black;
+    }
+    .brand {
+        position: relative;
     }
 }
