@@ -50,7 +50,7 @@ img {
 footer {
     position: fixed;
     bottom: 0;
-    right: 0;
+    right: -70;
     z-index: 1;
 }
 
@@ -74,6 +74,27 @@ footer {
     display: none;
 }
 
-.brand {
-    position: relative;
+.cart-modal {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80%;
+    position: fixed; 
+    padding-top: 100px; 
+    left: 10%;
+    top: 10%;
+    width: 100%; 
+}
+
+.checkout-modal {
+    position: fixed; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
 }
