@@ -32,8 +32,6 @@ const addItem = item => {
     cart.push(item)
     console.log(cart)
 }
-
-document.addEventListener('DOMContentLoaded', () => {
     
     const checkout = document.getElementById("checkout-page");
     const checkBtn = document.getElementById("checkout");
@@ -84,6 +82,3 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Invalid payment method selection');
         }
     });
-});
-    
-
