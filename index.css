@@ -18,6 +18,7 @@ header {
 .content {
     margin-top: 100px;
 }
+
 #checkout {
     margin: 0;
 }
@@ -89,18 +90,27 @@ tys-mobile
     justify-content: center;
 }
 
-
-main
 @media screen and (min-width: 420px) {
     .content {
         display: flex;
         flex-wrap: wrap;
     }
 
-  tys-mobile
+    .checkout-screen {
+        margin: 15px;
+    }
+
     .form-container {
         border: 1px solid black;
     }
+  
+    .cart {
+        float: left;
+    }
+
+    form {
+        border: 1px solid black;
+        float: right;
 
     .your-cart {
         float: left;
@@ -110,6 +120,5 @@ main
     }
     .brand {
         position: relative;
-        main
     }
 }
