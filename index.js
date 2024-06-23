@@ -27,11 +27,45 @@ const calculateTotal = () => {
     document.getElementById('finalTotal').innerText = "$" + finalTotal.toFixed(2);
 }
 
+
+/*
+let sf2 = {
+
+}
+
+let warhammer = {
+
+}
+
+let fortyk = {
+
+}
+
+let funko = {
+
+}
+*/
+
+let item = {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+}
+
+
 const cart = []
 const addItem = item => {
     cart.push(item)
     console.log(cart)
 }
+
+addItem()
+
+let subTotal = cart.reduce((total, item) => {
+    return subTotal + (item.price * item.quantity);
+}, 0)
+
+document.getElementById("subTotal").innerHTML = (subTotal)
 
 document.addEventListener('DOMContentLoaded', () => {
     
