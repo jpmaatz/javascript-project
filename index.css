@@ -115,6 +115,14 @@ footer {
     justify-content: center;
 }
 
+#cart-container {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15%;
+}
+
 @media screen and (min-width: 420px) {
     .content {
         display: flex;
