@@ -89,6 +89,11 @@ footer {
     width: 100%; 
 }
 
+.receipt {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 .checkout-modal {
     position: fixed; 
     padding-top: 100px; 
@@ -133,18 +138,22 @@ tys-mobile
         float: left;
     }
 
-    form {
-        border: 1px solid black;
-        float: right;
-
     .your-cart {
         float: left;
-      
+    }
+
     form {
         border: 1px solid black;
     }
+
     .brand {
         position: relative;
     }
+
+    .receipt {
+        display: flex;
+        flex-wrap: wrap;
+      }
+}
 
 }

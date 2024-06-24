@@ -1,5 +1,3 @@
-
-
 const getCartPrices = () => {
     const prices = []
     //const total = prices
@@ -13,37 +11,23 @@ const loadSubtotal = () => {
     document.getElementById('subTotal').innerText = total
 }
 
-const calculateTotal = () => {
-    
-    let cartTotal = +document.getElementById('subTotal').innerText;
-    let amountDue = parseFloat(cartTotal);
-
-    let salesTaxRate = 0.0675;
-    let salesTax = amountDue * salesTaxRate;
-
-    let finalTotal = amountDue + salesTax;
-
-    document.getElementById('salesTax').innerText = "$" + salesTax.toFixed(2);
-    document.getElementById('finalTotal').innerText = "$" + finalTotal.toFixed(2);
-}
-
-
 let items = [
-    {
-    name: "Magic the Gathering",
-    price: 29.99,
-    quantity: 1
-    }, 
-    {
-    name: "Magic the Gathering",
-    price: 29.99,
-    quantity: 1
-    }, 
     {
     name: "Magic the Gathering",
     price: 29.99,
     quantity: 1,
     img: 'pics/mtg.jpeg'
+    }, 
+    {
+    name: "Star Wars",
+    price: 99.99,
+    quantity: 1,
+    img: 'pics/swl.jpg'
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
     }, 
     {
     name: "Magic the Gathering",
@@ -83,7 +67,7 @@ let items = [
 
 ]
 
-
+/*
 const cart = []
 const addItem = item => {
     cart.push(item)
@@ -97,6 +81,7 @@ let subTotal = cart.reduce((total, item) => {
 }, 0)
 
 document.getElementById("subTotal").innerHTML = (subTotal)
+*/
 
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -152,3 +137,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
     
 
+document.getElementById('checkout').addEventListener('click', event => {
+    event.preventDefault();
+    const receipt = document.getElementById('receipt');
+    const mainPage = document.getElementById('content');
+    mainPage.style.display = 'none';
+    receipt.classList.remove('receipt');
+    receipt.innerHTML = '';
+    for(let obj of products) {
+        if(obj.count > 0) {
+            receipt.innerHTML += `<div class="checkout">${obj.name}  QTY:  ${obj.quantity} PRICE: $${(obj.price).toFixed(2)}</div>`;
+        }
+    }
+    receipt.innerHTML += `<div class="totalAmount"<h1>Total: $${(subtotalPlusTax(products)).toFixed(2)}</h1></div>`;
+})

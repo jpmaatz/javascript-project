@@ -13,10 +13,10 @@
         <h1>SHOPPE</h1>
         <button onclick="calculateTotal()">checkout</button>
     </header>
-    <main class="content">
+    <main class="content" id="content">
         <div id="starwars" class="item-star-wars">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7LHXBA4BYrZtqKfLcB0LfZ1AxZANMYBfGCBRpNIynO3XuvBUOvH7ExUPEkZJEXN9aAhw&usqp=CAU" alt="star wars legion core set">
-            <button onclick="addItem('star wars')">add to cart</button>
+            <button onclick="addItem('slw')">add to cart</button>
         </div>
         <div class="item mtg">
             <img src="https://media.wizards.com/2023/images/daily/en_YSWRQGMENbeO.png" alt="mtg">
@@ -151,6 +151,11 @@
             <input type="number" id="how-much" placeholder="100.00">
             <button type="submit" id="cash-purchase">place order</button>
         </form>
+    </div>
+    <div class="receipt" id="receipt">
+        <p>
+            <h1>Your Receipt</h1>
+        </p>
     </div>
     <script src="index.js"></script>
 </body>
