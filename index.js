@@ -1,81 +1,70 @@
 
-
-const getCartPrices = () => {
-    const prices = []
-    //const total = prices
-    return prices
-}
-
-const loadSubtotal = () => {
-    const prices = getCartPrices()
-    let total = 0
-    for (const item of prices) total += item.price
-    document.getElementById('subTotal').innerText = total
-}
-
-const calculateTotal = () => {
-    
-    let cartTotal = +document.getElementById('subTotal').innerText;
-    let amountDue = parseFloat(cartTotal);
-
-    let salesTaxRate = 0.0675;
-    let salesTax = amountDue * salesTaxRate;
-
-    let finalTotal = amountDue + salesTax;
-
-    document.getElementById('salesTax').innerText = "$" + salesTax.toFixed(2);
-    document.getElementById('finalTotal').innerText = "$" + finalTotal.toFixed(2);
-}
-
-
-/*
-let sf2 = {
-
-}
-
-let warhammer = {
-
-}
-
-let fortyk = {
-
-}
-
-let funko = {
-
-}
-*/
-
-let item = {
-    name: "Magic the Gathering",
-    price: 29.99,
-    quantity: 1
-}
-
+const cartContainer = document.getElementById('cart-container');
 
 const cart = []
 const addItem = item => {
     cart.push(item)
     console.log(cart)
+    const newItemElement = document.createElement('div');
+    newItemElement.textContent = item;
+    cartContainer.appendChild(newItemElement);
+};
+
+const prices = [];
+
+const getPrice = price => {
+    prices.push(price);
+    console.log(prices);
+    const newPriceElement = document.createElement("div");
+    newPriceElement.textContent = price.toFixed(2); 
+    cartContainer.appendChild(newPriceElement);
+    updateSubtotal();
+};
+
+const updateSubtotal = () => {
+    const subtotalValue = calculateSubtotal();
+    
+    clearSubtotalDisplay();
+    const subtotalEle = document.createElement('div');
+    subtotalEle.textContent = `Subtotal: $${subtotalValue.toFixed(2)}`;
+    cartContainer.appendChild(subtotalEle);
+};
+
+const calculateSubtotal = () => {
+    let total = 0;
+    for (let price of prices) {
+        total += price;
+    }
+    return total;
+};
+
+const clearSubtotalDisplay = () => {
+    const existingSubtotal = document.querySelector('#cart-container > div:last-child');
+    if (existingSubtotal) {
+        cartContainer.removeChild(existingSubtotal);
+    }
+};
+
+const finalTotal = () => {
+    const subtotal = calculateSubtotal();
+    const taxRate = 0.07;
+    const taxAmount = subtotal * taxRate;
+    const totalAmount = subtotal + taxAmount;
+
+    const newTotalElement = document.createElement("div");
+    newTotalElement.textContent = `Final total: $${totalAmount.toFixed(2)}`;
+    
+    clearFinalTotalDisplay();
+    cartContainer.appendChild(newTotalElement);
 }
-
-addItem()
-
-let subTotal = cart.reduce((total, item) => {
-    return subTotal + (item.price * item.quantity);
-}, 0)
-
-document.getElementById("subTotal").innerHTML = (subTotal)
-
-document.addEventListener('DOMContentLoaded', () => {
     
     const checkout = document.getElementById("checkout-page");
     const checkBtn = document.getElementById("checkout");
     const store = document.getElementById("store-page");
     const goBack = document.getElementById("go-back");
     const addItemButton = document.getElementById("add-item-button");
-    const cardPaymentPage = document.getElementById('card-payment-page');
-    const cashPaymentPage = document.getElementById('cash-payment-page');
+    const cardPaymentPage = document.getElementById("card-purchase-screen");
+    const cashPaymentPage = document.getElementById("cash-transaction");
     const paymentMethodForm = document.getElementById('payment-method-form');
 
     
@@ -118,6 +107,3 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Invalid payment method selection');
         }
     });
-});
-    
-

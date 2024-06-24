@@ -99,8 +99,8 @@ footer {
     overflow: auto; 
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4); 
+}
 
-tys-mobile
 .brand {
     position: relative;
 }
@@ -113,6 +113,14 @@ tys-mobile
 .your-cart {
     display: flex;
     justify-content: center;
+}
+
+#cart-container {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15%;
 }
 
 @media screen and (min-width: 420px) {
@@ -136,10 +144,7 @@ tys-mobile
     form {
         border: 1px solid black;
         float: right;
-
-    .your-cart {
-        float: left;
-      
+    }
     form {
         border: 1px solid black;
     }
