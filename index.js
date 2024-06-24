@@ -46,11 +46,60 @@ let funko = {
 }
 */
 
-let item = {
+let items = [
+    {
     name: "Magic the Gathering",
     price: 29.99,
     quantity: 1
-}
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+    img: 
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+    }, 
+    {
+    name: "Magic the Gathering",
+    price: 29.99,
+    quantity: 1
+    }, 
+
+]
 
 
 const cart = []
