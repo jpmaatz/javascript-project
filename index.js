@@ -28,24 +28,6 @@ const calculateTotal = () => {
 }
 
 
-/*
-let sf2 = {
-
-}
-
-let warhammer = {
-
-}
-
-let fortyk = {
-
-}
-
-let funko = {
-
-}
-*/
-
 let items = [
     {
     name: "Magic the Gathering",
@@ -60,8 +42,8 @@ let items = [
     {
     name: "Magic the Gathering",
     price: 29.99,
-    quantity: 1
-    img: 
+    quantity: 1,
+    img: 'pics/mtg.jpeg'
     }, 
     {
     name: "Magic the Gathering",
