@@ -11,7 +11,7 @@ const loadSubtotal = () => {
     document.getElementById('subTotal').innerText = total
 }
 
-let items = [
+let products = [
     {
     name: "Magic the Gathering",
     price: 29.99,
