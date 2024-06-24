@@ -1,6 +1,6 @@
 
 const cartContainer = document.getElementById('cart-container');
-    
+
 const cart = []
 const addItem = item => {
     cart.push(item)
